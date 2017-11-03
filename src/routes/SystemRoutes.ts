@@ -3,14 +3,10 @@ import * as express from 'express';
 import { BaseRoutes } from '../routes/BaseRoutes';
 import { SystemModel } from '../models/SystemModel';
 
-export class SystemRoutes extends BaseRoutes {
-
-  model: SystemModel = new SystemModel();
-
-  constructor() {
-		super();
+class SystemRoutes extends BaseRoutes {
+  constructor(public model: SystemModel) {
+		super(model);
 	}
-
 }
 
-export const systemRouter = new SystemRoutes().router;
+export const systemRouter = new SystemRoutes(new SystemModel()).router;

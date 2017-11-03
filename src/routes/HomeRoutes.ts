@@ -2,7 +2,7 @@ import * as express from 'express';
 
 import { Express, Router } from 'express';
 
-export class HomeRoutes {
+class HomeRoutes {
 
 	public router: Router;
 

@@ -5,10 +5,9 @@ import { IRoutes } from './IRoutes';
 
 export class BaseRoutes implements IRoutes {
 
-  public model: IModel;
   public router: Router;
 
-  constructor() {
+  constructor(public model: IModel) {
     this.router = express.Router();
     this.mountRoutes();
   }
